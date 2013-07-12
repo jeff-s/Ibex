@@ -1,0 +1,14 @@
+6271b36313b3130e42be87c51d8a147c c5c1dc1badbab09b3353ca89404111c1 ffffffffffffffffffffffffffffffff 102 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app
+d3b31b4aa719781c880a33a9ea9cae26 05853a8d876bbc359c159f1e7ce09f22 ffffffffffffffffffffffffffffffff 1499892 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/MacOS/Ibex
+94594b5145059c2f1475dca94370abf1 f062bea28ed7993aed742e8344180dd9 ffffffffffffffffffffffffffffffff 336064 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/Main.o
+94594b51450b6edf1475dca943704be0 9a8ee5b903dbd570effb798297af38e0 ffffffffffffffffffffffffffffffff 32811 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/Coords.s
+94594b51450b6edf1475dca943704be0 4e21043fcd755d94075b3d6f139d0a4c ffffffffffffffffffffffffffffffff 7540 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/Coords.o
+94594b5102a95a641475dca9437028cd 8f391af199db7f4dcf9788665ae69bf6 ffffffffffffffffffffffffffffffff 114924 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/Utils.o
+94594b51450b6ec01475dca94370482a 2c592c9cb44848810f3d599bd815010a ffffffffffffffffffffffffffffffff 43116 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/Star.o
+94594b5145059acb1475dca943702173 5ac9dceb8c1e76bfb6fa2d117c1c89d6 ffffffffffffffffffffffffffffffff 100976 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Ibex.build/Debug/Ibex.build/Objects-normal/ppc/InfoComponent.o
+0000000001595ef6000000000003493f 94594b51445230291475dca943730294 ffffffffffffffffffffffffffffffff 35915716 /Library/Caches/com.apple.Xcode.501/SharedPrecompiledHeaders/Ibex_Prefix-bvnifmidtbcllfdaaozrapfrnsgd/Ibex_Prefix.pch.gch
+00000000000000000000000000000000 73e0f7158881b4ee8cb7e401da4dae20 ffffffffffffffffffffffffffffffff 170 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/Resources/English.lproj/main.nib
+00000000000000000000000000000000 c7a765b1bb4063c9da16cf7351bb8b58 ffffffffffffffffffffffffffffffff 194 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/Resources/English.lproj/InfoPlist.strings
+0000000047a276980000000000000308 d334601a5fec11926f34e98012f8d2ce ffffffffffffffffffffffffffffffff 8 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/PkgInfo
+0000000047a276980000000000000308 d334601a5fec11926f34e98012f8d2ce ffffffffffffffffffffffffffffffff 751 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/Info.plist
+00000000000000000000000000000000 dde769a18694e7dd4328bb0d5d976e41 ffffffffffffffffffffffffffffffff 112518 /Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/build/Debug/Ibex.app/Contents/Resources/snakeguy1.icns

@@ -1,0 +1,2 @@
+/Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/../../common/InfoComponent.cpp: In member function 'virtual void InfoComponent::resized()':
+/Users/jeff/Documents/juce/extras/jeffproj/Mac/Ibex/../../common/InfoComponent.cpp:46: warning: unused variable 'ch'

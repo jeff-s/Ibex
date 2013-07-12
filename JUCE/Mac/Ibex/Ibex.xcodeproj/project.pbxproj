@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F2DCDC00D52A6F500969EAC /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBA0D52A6F500969EAC /* AGL.framework */; };
+		1F2DCDC10D52A6F500969EAC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBB0D52A6F500969EAC /* CoreAudio.framework */; };
+		1F2DCDC20D52A6F500969EAC /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBC0D52A6F500969EAC /* CoreMIDI.framework */; };
+		1F2DCDC30D52A6F500969EAC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBD0D52A6F500969EAC /* IOKit.framework */; };
+		1F2DCDC40D52A6F500969EAC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBE0D52A6F500969EAC /* OpenGL.framework */; };
+		1F2DCDC50D52A6F500969EAC /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2DCDBF0D52A6F500969EAC /* QuickTime.framework */; };
+		1F8A3F950DC9F8FD0010A4C2 /* MovementQueueComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A3F940DC9F8FD0010A4C2 /* MovementQueueComponent.cpp */; };
+		1FBA5EA40D5D358F0082F802 /* InfoComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA5E9B0D5D358E0082F802 /* InfoComponent.cpp */; };
+		1FBA5EA50D5D358F0082F802 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA5E9D0D5D358E0082F802 /* Main.cpp */; };
+		1FBA5EA60D5D358F0082F802 /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA5E9E0D5D358E0082F802 /* Star.cpp */; };
+		1FBA5EA70D5D358F0082F802 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA5EA00D5D358F0082F802 /* Utils.cpp */; };
+		1FBA5EA80D5D358F0082F802 /* Coords.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA5EA30D5D358F0082F802 /* Coords.cpp */; };
+		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F8A3FB50DC9FA4F0010A4C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F8A3FAE0DC9FA4E0010A4C2 /* Juce.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D /* libjuce.a */;
+			remoteInfo = Juce;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		1F2DCDBA0D52A6F500969EAC /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		1F2DCDBB0D52A6F500969EAC /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		1F2DCDBC0D52A6F500969EAC /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
+		1F2DCDBD0D52A6F500969EAC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		1F2DCDBE0D52A6F500969EAC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1F2DCDBF0D52A6F500969EAC /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		1F8A3F930DC9F8FD0010A4C2 /* MovementQueueComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovementQueueComponent.h; path = ../../common/MovementQueueComponent.h; sourceTree = SOURCE_ROOT; };
+		1F8A3F940DC9F8FD0010A4C2 /* MovementQueueComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MovementQueueComponent.cpp; path = ../../common/MovementQueueComponent.cpp; sourceTree = SOURCE_ROOT; };
+		1F8A3FAE0DC9FA4E0010A4C2 /* Juce.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Juce.xcodeproj; path = ../../../../build/macosx/Juce.xcodeproj; sourceTree = SOURCE_ROOT; };
+		1FBA5E9B0D5D358E0082F802 /* InfoComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InfoComponent.cpp; path = ../../common/InfoComponent.cpp; sourceTree = SOURCE_ROOT; };
+		1FBA5E9C0D5D358E0082F802 /* InfoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoComponent.h; path = ../../common/InfoComponent.h; sourceTree = SOURCE_ROOT; };
+		1FBA5E9D0D5D358E0082F802 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ../../common/Main.cpp; sourceTree = SOURCE_ROOT; };
+		1FBA5E9E0D5D358E0082F802 /* Star.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Star.cpp; path = ../../common/Star.cpp; sourceTree = SOURCE_ROOT; };
+		1FBA5E9F0D5D358F0082F802 /* Star.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Star.h; path = ../../common/Star.h; sourceTree = SOURCE_ROOT; };
+		1FBA5EA00D5D358F0082F802 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../../common/Utils.cpp; sourceTree = SOURCE_ROOT; };
+		1FBA5EA10D5D358F0082F802 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../common/Utils.h; sourceTree = SOURCE_ROOT; };
+		1FBA5EA20D5D358F0082F802 /* Coords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Coords.h; path = ../../common/Coords.h; sourceTree = SOURCE_ROOT; };
+		1FBA5EA30D5D358F0082F802 /* Coords.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Coords.cpp; path = ../../common/Coords.cpp; sourceTree = SOURCE_ROOT; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		32DBCF6D0370B57F00C91783 /* Ibex_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ibex_Prefix.pch; sourceTree = "<group>"; };
+		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D0C4E970486CD37000505A6 /* Ibex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0C4E910486CD37000505A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */,
+				1F2DCDC00D52A6F500969EAC /* AGL.framework in Frameworks */,
+				1F2DCDC10D52A6F500969EAC /* CoreAudio.framework in Frameworks */,
+				1F2DCDC20D52A6F500969EAC /* CoreMIDI.framework in Frameworks */,
+				1F2DCDC30D52A6F500969EAC /* IOKit.framework in Frameworks */,
+				1F2DCDC40D52A6F500969EAC /* OpenGL.framework in Frameworks */,
+				1F2DCDC50D52A6F500969EAC /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E970486CD37000505A6 /* Ibex.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F8A3FAF0DC9FA4E0010A4C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A3FB60DC9FA4F0010A4C2 /* libjuce.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* Ibex */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = Ibex;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A3F930DC9F8FD0010A4C2 /* MovementQueueComponent.h */,
+				1F8A3F940DC9F8FD0010A4C2 /* MovementQueueComponent.cpp */,
+				1FBA5E9B0D5D358E0082F802 /* InfoComponent.cpp */,
+				1FBA5E9C0D5D358E0082F802 /* InfoComponent.h */,
+				1FBA5E9D0D5D358E0082F802 /* Main.cpp */,
+				1FBA5E9E0D5D358E0082F802 /* Star.cpp */,
+				1FBA5E9F0D5D358F0082F802 /* Star.h */,
+				1FBA5EA00D5D358F0082F802 /* Utils.cpp */,
+				1FBA5EA10D5D358F0082F802 /* Utils.h */,
+				1FBA5EA20D5D358F0082F802 /* Coords.h */,
+				1FBA5EA30D5D358F0082F802 /* Coords.cpp */,
+				32DBCF6D0370B57F00C91783 /* Ibex_Prefix.pch */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E960486CD37000505A6 /* Info.plist */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A3FAE0DC9FA4E0010A4C2 /* Juce.xcodeproj */,
+				1F2DCDBA0D52A6F500969EAC /* AGL.framework */,
+				1F2DCDBB0D52A6F500969EAC /* CoreAudio.framework */,
+				1F2DCDBC0D52A6F500969EAC /* CoreMIDI.framework */,
+				1F2DCDBD0D52A6F500969EAC /* IOKit.framework */,
+				1F2DCDBE0D52A6F500969EAC /* OpenGL.framework */,
+				1F2DCDBF0D52A6F500969EAC /* QuickTime.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D0C4E890486CD37000505A6 /* Ibex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0E91AC508A95435008D54AB /* Build configuration list for PBXNativeTarget "Ibex" */;
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6 /* Resources */,
+				8D0C4E8F0486CD37000505A6 /* Sources */,
+				8D0C4E910486CD37000505A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ibex;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Ibex;
+			productReference = 8D0C4E970486CD37000505A6 /* Ibex.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "Ibex" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* Ibex */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1F8A3FAF0DC9FA4E0010A4C2 /* Products */;
+					ProjectRef = 1F8A3FAE0DC9FA4E0010A4C2 /* Juce.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D0C4E890486CD37000505A6 /* Ibex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1F8A3FB60DC9FA4F0010A4C2 /* libjuce.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjuce.a;
+			remoteRef = 1F8A3FB50DC9FA4F0010A4C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D0C4E8C0486CD37000505A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */,
+				8D0C4E8E0486CD37000505A6 /* main.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0C4E8F0486CD37000505A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FBA5EA40D5D358F0082F802 /* InfoComponent.cpp in Sources */,
+				1FBA5EA50D5D358F0082F802 /* Main.cpp in Sources */,
+				1FBA5EA60D5D358F0082F802 /* Star.cpp in Sources */,
+				1FBA5EA70D5D358F0082F802 /* Utils.cpp in Sources */,
+				1FBA5EA80D5D358F0082F802 /* Coords.cpp in Sources */,
+				1F8A3F950DC9F8FD0010A4C2 /* MovementQueueComponent.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0E91AC608A95435008D54AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Ibex_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Ibex;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C0E91AC708A95435008D54AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Ibex_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Ibex;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C0E91ACA08A95435008D54AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C0E91ACB08A95435008D54AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0E91AC508A95435008D54AB /* Build configuration list for PBXNativeTarget "Ibex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E91AC608A95435008D54AB /* Debug */,
+				C0E91AC708A95435008D54AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "Ibex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E91ACA08A95435008D54AB /* Debug */,
+				C0E91ACB08A95435008D54AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

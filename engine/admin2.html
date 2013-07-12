@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Ibex Admin</title>
+
+<style type="text/css">
+body {background-color:#000; font-family:Verdana,Arial;
+scrollbar-arrow-color: #FFF;
+scrollbar-3dlight-color: #000;
+scrollbar-darkshadow-color: #000;
+scrollbar-face-color: #000;
+scrollbar-highlight-color: #999;
+scrollbar-shadow-color: #999;
+scrollbar-track-color: #314;
+}
+form {color:#FFF; font-family:Verdana,Arial; font-size:10pt; font-weight:bold;}
+select,input {background-color:#333; border:solid 1px #FFF; font-family:Verdana,Arial; font-size:11pt; font-weight:bold; color:#CAC;}
+a {color:#FFF; font-family:Verdana,Arial; font-size:11pt; font-weight:bold; text-decoration:none; border:solid 1px #FFF; background-color:#444; padding:1px;}
+.larger {font-size:larger;}
+.white {color:#FFF;}
+
+.mapimg {border:solid 1px #888;}
+#i {width:95%; border:solid 2px #AAA; background-repeat:no-repeat; background-color:#000; cursor:move;}
+#resizeline, #resizeline2 {text-align:right; padding:0px; margin:0px; }
+#resizeknob, #resizeknob2 {padding:0px; margin:0px; cursor:se-resize;}
+#instr {color:white; font-size:x-small;}
+#slidertxt {color:white; font-size:small; font-weight:bold; margin:0px; padding:0px;}
+
+#mappershadow {position:absolute; background:url(shadowdark.gif) repeat; width:400px; height:275px;}
+#mapper {border:solid 5px #434; width:390px; height:265px; position:relative; top:-5px; left:-5px; background:url(resize.gif) bottom right no-repeat #000;}
+#mapper_player {border:solid 1px #6E6; margin-bottom:10px;}
+#map_title, #mailer_title {background-color:#434; font-size:9pt; font-weight:bold; text-align:center; margin:0 auto; color:#FFF; padding-top:5px; padding-bottom:5px; cursor:default;}
+.mapper_item {font-size:x-small; font-weight:bold; color:#FFF; background-color:#000; margin:0px; padding:3px; cursor:pointer;}
+#area {background-image:url(sliderbg.gif); height:15px; width:100px;}
+#knob {height:15px; width:15px; background-image:url(knob.gif); background-repeat:no-repeat; cursor:default;}
+
+#mailershadow {position:absolute; background:url(shadowdark.gif) repeat; width:400px; height:275px;}
+#mailer {border:solid 5px #434; width:390px; background-color:#000; position:relative; top:-5px; left:-5px; background:url(resize.gif) bottom right no-repeat #000;}
+
+#msgs p {padding:3px; margin:0px; color:#888; background-color:#000; font-size:small; font-weight:bold; cursor:default; border:solid 1px #000;}
+#msgs {width:50%; overflow-y:scroll; overflow-x:hidden; padding:5px; border:solid 1px #777;}
+#msgbody {float:right; border:solid 1px #000; padding:5px; width:40%; overflow-y:scroll; overflow-x:hidden; color:#FFF; font-size:small;}
+
+#bos, #bhex, #bwtf {cursor:default; font-size:x-small; font-weight:bold;}
+</style>
+<script type="text/javascript" src="moo.js"></script>
+</head>
+
+<body>
+
+<div id="mappershadow">
+ <div id="mapper">
+  <div id="map_title"><span class="larger">I</span>NTRA-<span class="larger">D</span>IMENSIONAL <span class="larger">T</span>ERRITORY <span class="larger">S</span>CHEMATIC</div>
+
+  <table style="width:100%;">
+  <tr>
+    <td valign="top" style="width:15%;" align="left">
+
+      <div id="mapper_player">
+        <p id="pl1" class="mapper_item">Eye Guys</p>
+        <p id="pl2" class="mapper_item">The Ophidians</p>
+        <p id="pl3" class="mapper_item">Teal Magi</p>
+        <p id="pl4" class="mapper_item">Purple Dragons</p>
+      </div>
+
+    <div id="area"><div id="knob"></div></div>
+    <p id="slidertxt">xx</p>
+
+    <p id="instr">Use the slider knob above to zoom the map; 
+    click and drag the map area to pan.</p>
+
+    </td>
+    <td valign="top" style="width:85%;">
+
+      <div id="i" onmousedown="d(event);return false;" onmousemove="m(event);return false;" onmouseup="u(event);return false;"><img id="ishim" src="spacer.gif" width="1" height="213" alt=""/></div>
+      <div id="resizeline"><img id="resizeknob" src="spacer.gif" width="15" height="15" alt=""/></div>
+    </td>
+  </tr>
+  </table>
+ </div>
+</div>
+
+<!-- ************************************************************* -->
+
+<p>&nbsp;</p>
+
+<div id="mailershadow">
+ <div id="mailer">
+  <div id="mailer_title"><span class="larger">T</span>RANS-<span class="larger">D</span>IMENSIONAL <span class="larger">C</span>OMMUNICATIONS <span class="larger">A</span>RRAY</div>
+
+  <div id="msgbody">
+    <p>body</p>
+  </div>
+
+  <div id="msgs"></div>
+
+  <div class="white"><span id="bhex">HexIbex</span>|<span id="bos">OSNews</span>|<span id="bwtf">Joel</span></div>
+  <div id="resizeline2"><img id="resizeknob2" src="spacer.gif" width="15" height="15" alt=""/></div>
+ </div>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script type="text/javascript">
+//<![CDATA[
+function fokus(tr){$(tr).effects({duration:100}).start({'backgroundColor':'#434','color':'#FFF'});}
+function blurr(tr){$(tr).effects({duration:500}).start({'backgroundColor':'#000','color':'#888'});}
+
+var pnum="2";
+var sss="20";
+var g_items;
+var feed="http://www.joelonsoftware.com/rss.xml";
+var anim=new Element('img',{
+  'src':'anim.gif'
+});
+
+window.addEvent('domready',stuff);
+
+
+function upmap()
+{
+	mapimg="map-"+pnum+"-"+sss+".png";
+	$('i').setStyle('background-image','url(lmaps/'+mapimg+')');
+}
+
+function setp(a)
+{
+	pnum=a.id.charAt(2);
+	upmap();
+}
+
+function msgclick(i)
+{
+  $$('#msgs p').setStyle('border-color','black');
+  i.setStyle('border-color','pink');
+  var title=i.getText();
+  g_items.each(function(item){
+    if (item.title==title)
+      $('msgbody').setHTML('<p><a target="_blank" href="'+item.link+'">'+item.title+'</a></p><p>'+item.desc+'</p>');});
+}
+
+function addItems(items)
+{
+  g_items=items;
+  var msgs=$('msgs');
+  items.each(function(item){
+    var el=new Element('p').setHTML(item.title);
+    el.inject(msgs);
+  });
+$$('#msgs p').addEvents({
+	mouseenter:function(){fokus(this);},
+	mouseleave:function(){blurr(this);},
+	click:function(){msgclick(this);}
+});
+    $('msgbody').setHTML('');
+}
+
+function doFeed()
+{
+    $('msgbody').setHTML('');
+    $(anim).injectInside($('msgbody'));
+    $$('#msgs p').each(function(elem){elem.remove();});
+
+    new Json.Remote('webgw.rexx/borg/feed?u='+escape(feed),{
+      method:'get',
+      onComplete:function(jobj){addItems(jobj.items);}
+      }).send();
+}
+
+function stuff(){
+
+    $('mappershadow').makeDraggable({handle:'map_title'});
+    $('mailershadow').makeDraggable({handle:'mailer_title'});
+
+    $('mappershadow').makeResizable({
+    	handle:'resizeknob',
+    	onDrag:function(a){
+      	//var s=a.getSize();//alert(s.size.x);
+      	var sh=a.getStyle('height').toInt();
+      	var sw=a.getStyle('width').toInt();
+    		$('ishim').setStyle('height',sh-58);
+    		$('mapper').setStyles({'width':(sw)-10,'height':(sh)-10});
+    	}
+  	 });
+
+    $$('.mapper_item').addEvents({
+      mouseenter:function(){fokus(this);},
+      mouseleave:function(){blurr(this);},
+      click:function(){setp(this);}
+    });
+
+    var hexSlide=new Slider($('area'),$('knob'),{
+    	mode:'horizontal',
+    	onChange:function(pos){sss=scaler(pos);$('slidertxt').setHTML(sss);upmap();}
+    }).set(0);
+
+    $('mailershadow').makeResizable({
+    	handle:'resizeknob2',
+    	onDrag:function(a){
+      	var sh=a.getStyle('height').toInt();
+      	var sw=a.getStyle('width').toInt();
+      	$('msgs').setStyle('height',sh-75);
+      	$('msgbody').setStyle('height',sh-75);
+    		$('mailer').setStyles({'width':(sw)-10,'height':(sh)-10});
+    	}
+  	 });
+
+
+    $('mailershadow').effect('top').start(400);
+
+    $('bhex').addEvent('click',function(){feed='http://hexibex.us/blosx.om/index.rss';doFeed();});
+    $('bos').addEvent('click',function(){feed='http://osnews.com/files/recent.xml';doFeed();});
+    $('bwtf').addEvent('click',function(){feed='http://www.joelonsoftware.com/rss.xml';doFeed();});
+
+  	var s=$('mailershadow').getSize();
+		$('mailer').setStyles({'width':(s.size.x)-10,'height':(s.size.y)-10});
+  	$('msgs').setStyle('height',s.size.y-75);
+  	$('msgbody').setStyle('height',s.size.y-75);
+
+
+    upmap();
+    doFeed();
+}
+
+///Jeff's old move code
+var s=false;
+var oPos=null;
+var ox=0,oy=0;
+var tx,ty;
+function d(ev)
+{
+s=true;
+ev= ev || window.event;
+oPos = mouseCoords(ev);
+}
+function m(ev)
+{
+  if(s)
+  {
+	ev= ev || window.event;
+	var mPos = mouseCoords(ev);
+	var dx=mPos.x-oPos.x+ox;
+	var dy=mPos.y-oPos.y+oy;
+  if (isNaN(dx))return;
+  if (isNaN(dy))return;
+  document.getElementById('i').style.backgroundPosition=""+dx+"px "+dy+"px";
+	tx=dx;ty=dy;
+  }
+}
+function u(e)
+{
+s=false;
+ox=tx;oy=ty;
+}
+
+function mouseCoords(ev){
+	if(ev.pageX || ev.pageY){
+		return {x:ev.pageX, y:ev.pageY};
+	}
+	return {
+		x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+		y:ev.clientY + document.body.scrollTop  - document.body.clientTop
+	};
+}
+///////// end jeff move
+
+function scaler(val)
+{
+	var minn=16;var maxx=48; var incr=2;
+	val=parseInt(val);
+
+	var dif=(maxx-minn)/incr;
+	var adj=parseInt((val/100)*dif);
+	var ret=adj*incr+minn;
+	return ret;
+}
+//]]>
+</script>
+
+</body>
+</html>
